@@ -109,7 +109,7 @@ TEST ?= ./...
 
 .PHONY: unit-test
 unit-test: vet ## Run tests.
-	go test $(TEST) -coverprofile cover.out
+	go test $(TEST)
 
 GOFILES_NO_VENDOR = $(shell find . -type f -name '*.go' -not -path "./vendor/*")
 .PHONY: lint
